@@ -56,6 +56,13 @@ def create_dir_structure(ip_address, output_directory):
     except Exception:
         os.mkdir(nmapdir)
 
+    enumdir = hostdir + "/enum"
+    print("   [>] Creating enum directory at: %s" % enumdir)
+    try:
+        os.stat(enumdir)
+    except Exception:
+        os.mkdir(enumdir)
+
     exploitdir = hostdir + "/exploit"
     print("   [>] Creating exploit directory at: %s" % exploitdir)
     try:
