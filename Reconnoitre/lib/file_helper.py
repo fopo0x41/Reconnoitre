@@ -70,10 +70,13 @@ def create_dir_structure(ip_address, output_directory):
     except Exception:
         os.mkdir(lootdir)
 
-    prooffile = hostdir + "/proof.txt"
-    print("   [>] Creating proof file at: %s" % prooffile)
-    open(prooffile, 'a').close()
+    localflagfile = hostdir + "/local.txt"
+    print("   [>] Creating localflag file at: %s" % localflagfile)
+    open(localflagfile, 'a').close()
 
+    rootflagfile = hostdir + "/root.txt"
+    print("   [>] Creating rootflag file at: %s" % rootflagfile)
+    open(rootflagfile, 'a').close()
 
 def write_recommendations(results, ip_address, outputdir):
     recommendations_file = outputdir + "/" + ip_address + "_findings.txt"
