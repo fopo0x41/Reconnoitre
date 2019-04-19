@@ -77,9 +77,9 @@ def create_dir_structure(ip_address, output_directory):
     except Exception:
         os.mkdir(lootdir)
 
-    localflagfile = hostdir + "/local.txt"
-    print("   [>] Creating localflag file at: %s" % localflagfile)
-    open(localflagfile, 'a').close()
+    userflagfile = hostdir + "/user.txt"
+    print("   [>] Creating userflag file at: %s" % userflagfile)
+    open(userflagfile, 'a').close()
 
     rootflagfile = hostdir + "/root.txt"
     print("   [>] Creating rootflag file at: %s" % rootflagfile)
