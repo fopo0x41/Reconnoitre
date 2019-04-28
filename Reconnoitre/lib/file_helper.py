@@ -85,6 +85,10 @@ def create_dir_structure(ip_address, output_directory):
     print("   [>] Creating rootflag file at: %s" % rootflagfile)
     open(rootflagfile, 'a').close()
 
+    notesfile = hostdir + "/notes-" + ip_address + ".md"
+    print("   [>] Creating notes file at: %s" % notesfile)
+    open(notesfile, 'a').close()
+
 def write_recommendations(results, ip_address, outputdir):
     recommendations_file = outputdir + "/" + ip_address + "_findings.txt"
     serv_dict = {}
